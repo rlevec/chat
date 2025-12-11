@@ -1,0 +1,14 @@
+# Node modules
+fe/node_modules/
+be/node_modules/
+
+# Environment files
+fe/.env
+be/.env
+
+# System files
+.DS_Store
+
+# Build outputs
+fe/dist/
+be/dist/
