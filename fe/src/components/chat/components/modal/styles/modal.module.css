@@ -1,0 +1,310 @@
+.wrapper {
+    height: 100svh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 51414210;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-4);
+    opacity: 0;
+    animation: fadeIn var(--transition) forwards;
+    gap: var(--space-4);
+}
+
+.wrapper.mobile {
+    flex-direction: column-reverse;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.95);
+    animation: scaleIn var(--transition) forwards;
+    position: relative;
+}
+
+.mobile .container {
+    width: 100%;
+}
+
+.content_box {
+    width: 500px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--space-8);
+    align-items: center;
+}
+
+.mobile .content_box {
+    width: 100%;
+    height: auto;
+    aspect-ratio: unset;
+    gap: var(--space-4)
+}
+
+.indicator_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2);
+    flex-direction: column;
+}
+
+.indicator_title {
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+}
+
+.indicator_loader {
+    width: 50px;
+    height: 50px;
+}
+
+.indicator_error_icon {
+    width: 50px;
+    height: 50px;
+    color: var(--error);
+}
+
+
+.indicator_button {
+    background: var(--primary-500);
+    border: none;
+    width: 125px;
+    height: 40px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    flex-shrink: 0;
+}
+
+.indicator_button:hover {
+    background: var(--primary-600);
+}
+
+.indicator_icon_svg {
+    color: var(--text-inverse);
+    width: 16px;
+    height: 16px;
+}
+
+
+.indicator_icon_svg path {
+    fill: var(--text-inverse);
+}
+
+.close_btn_container {
+    width: auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    z-index: 10;
+}
+
+.mobile .close_btn_container {
+    width: 100%;
+    height: auto;
+    justify-content: end;
+    align-items: center;
+}
+
+.close_button {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    width: 32px !important;
+    height: 32px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+    padding: 0 !important;
+}
+
+.close_button:hover {
+    background-color: var(--neutral-100);
+    border-color: var(--text-primary);
+}
+
+.close_button_svg {
+    width: 20px !important;
+    height: 20px !important;
+    color: var(--text-secondary);
+}
+
+.body_section {
+    padding: var(--space-6);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+}
+
+.profile_picture_wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.profile_picture_wrapper img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    border: 2px solid var(--border-light);
+}
+
+.profile_picture_wrapper:hover img {
+    transform: scale(1.03);
+}
+
+.edit_profile_button {
+    position: absolute !important;
+    bottom: 2px;
+    right: 8px;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s ease;
+}
+
+.edit_profile_button svg {
+    width: 20px !important;
+    height: 20px !important;
+    color: white;
+    opacity: 0.9;
+    transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.edit_profile_button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.edit_profile_button:hover svg {
+    color: black;
+    opacity: 1;
+}
+
+.username_contacts_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1)
+}
+
+.username_contacts_content {
+    text-align: center;
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+    color: var(--text-secondary);
+}
+
+.username_contacts_content span {
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+}
+
+.fields_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-top: 0;
+    width: 100%;
+}
+
+.field_row {
+    display: flex;
+    justify-content: center;
+    padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.field_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: left;
+}
+
+.field_button_title {
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+}
+
+.field_button:hover {
+    background-color: var(--primary-50);
+    border-color: var(--primary-200);
+}
+
+.field_button_icon {
+    width: 18px !important;
+    height: 18px !important;
+    color: var(--primary-600);
+    transition: color var(--transition-fast);
+}
+
+.field_button:hover .field_button_icon {
+    color: var(--primary-800);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.95); }
+    to { transform: scale(1); }
+}

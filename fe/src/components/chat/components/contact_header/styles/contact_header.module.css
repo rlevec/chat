@@ -1,0 +1,284 @@
+
+.chat_header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4) var(--space-6);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.chat_header.tablet {
+  display: grid;
+  grid-template-areas: 
+    "avatar_info_section contact_cta_section"
+    "status_section status_section";
+}
+
+.chat_header.mobile {
+  display: grid;
+  grid-template-areas: 
+    "avatar_info_section contact_cta_section"
+    "status_section status_section"
+  ;
+  background: var(--bg-sidebar);
+  border-top: 0.5px solid var(--text-secondary);
+}
+
+.contact_avatar_info_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: var(--space-2)
+}
+
+.chat_header.tablet .contact_avatar_info_container,
+.chat_header.mobile .contact_avatar_info_container {
+  grid-area: avatar_info_section;
+}
+
+.contact_avatar_container {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.contact_avatar_image {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+.contact_avatar {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.avatar_placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--neutral-200);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-500);
+}
+
+.status_indicator {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary);
+}
+
+.status_indicator_online {
+  background: var(--success);
+}
+
+.status_indicator_offline {
+  background: var(--error);
+}
+
+
+.contact_info {
+  flex: 1;
+}
+
+.contact_name {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+}
+
+.chat_header.mobile .contact_name {
+  color: var(--text-inverse);
+}
+
+.contact_status {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+
+.contact_cta_buttons_container {
+  width: auto;
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.contact_cta_buttons_container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.contact_accept_btn {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--success);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2) var(--space-3);
+  box-shadow: var(--shadow-success);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contact_accept_btn:hover {
+  background-color: #0ea76e;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.4);
+  transform: translateY(-1px);
+}
+
+.contact_accept_btn:active {
+  transform: translateY(0);
+}
+
+.contact_decline_btn {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--error);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2) var(--space-3);
+  box-shadow: var(--shadow-error);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contact_decline_btn:hover {
+  background-color: #dc2626;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.4);
+  transform: translateY(-1px);
+}
+
+.contact_decline_btn:active {
+  transform: translateY(0);
+}
+
+.contact_cta_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--neutral-200);
+  color: var(--neutral-800);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2) var(--space-3);
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.contact_cta_btn:hover {
+  background-color: var(--neutral-300);
+  transform: translateY(-1px);
+}
+
+.contact_cta_btn:active {
+  transform: translateY(0);
+}
+
+
+.contact_cta_icon {
+  width: 20px;
+  height: 20px;
+  color: var(--primary-50);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.contact_cta_buttons_container button:hover .contact_cta_icon {
+  transform: scale(1.1);
+  color: var(--primary-100);
+}
+
+.contact_cta_buttons_container button:active .contact_cta_icon {
+  transform: scale(0.95);
+}
+
+.chat_header.mobile button:hover .contact_cta_icon,
+.chat_header.mobile .contact_cta_icon {
+  color: var(--bg-sidebar);
+}
+
+
+.contact_cta_section {
+  width: 100%;
+  justify-content: end;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+
+.chat_header.tablet .contact_cta_section,
+.chat_header.mobile .contact_cta_section {
+  grid-area: contact_cta_section;
+}
+
+.status_section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat_header.tablet .status_section,
+.chat_header.mobile .status_section {
+  grid-area: status_section;
+}
+
+.contact_request_status {
+  width: auto;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+.contact_request_status_pending {
+  background: var(--warning);
+  color: var(--text-inverse);
+}
+
+.contact_request_status_accepted {
+  background: var(--success);
+  color: var(--text-inverse);
+}
+
+.contact_request_status_blocked {
+  background: var(--error);
+  color: var(--text-inverse);
+}
+
+
+
+.status_online {
+  color: var(--success);
+}
+
+.status_offline {
+  color: var(--error);
+}

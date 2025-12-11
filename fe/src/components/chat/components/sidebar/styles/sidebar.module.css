@@ -1,0 +1,160 @@
+.wrapper {
+  min-width: 280px;
+  width: auto;
+  background-color: var(--bg-sidebar);
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-md);
+  z-index: 1000;
+  transition: width 0.3s ease;
+}
+
+.wrapper.mobile {
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+}
+
+.closed {
+  min-width: unset;
+  width: 80px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-4);
+  position: relative;
+}
+
+.top_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+.content_section {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom_section {
+  padding-top: var(--space-4);
+}
+
+.settings_button {
+  width: 40px;
+  height: 40px;
+  background: var(--primary-700);
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.settings_button:hover {
+  background: var(--primary-600);
+}
+
+.settings_button_svg {
+  color: var(--text-inverse);
+  width: 20px;
+  height: 20px;
+}
+
+.toggle_button {
+  background: var(--primary-700);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.toggle_button:hover {
+  background: var(--primary-600);
+}
+
+.toggle_button_svg {
+  color: var(--text-inverse);
+  width: 20px;
+  height: 20px;
+}
+
+.close_button_svg path {
+  fill: var(--text-inverse);
+}
+
+
+.logout_button {
+  background: var(--neutral-700);
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  font-size: var(--text-sm);
+  color: var(--text-inverse);
+  font-weight: var(--font-medium);
+}
+
+.logout_button:hover {
+  background: var(--neutral-600);
+}
+
+.logout_button_svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.logout_text {
+  font-size: var(--text-sm);
+}
+
+.closed .content_section {
+  display: none;
+}
+
+.closed .top_section {
+  justify-content: center;
+  margin-bottom: 0;
+  height: 100%;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+.closed .bottom_section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.closed .logout_button {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  margin: 0 auto;
+}
+
+.closed .logout_text {
+  display: none;
+}

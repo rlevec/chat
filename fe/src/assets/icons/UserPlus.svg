@@ -1,0 +1,18 @@
+<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+  <!-- head -->
+  <circle cx="12" cy="7" r="4" fill="none"
+          stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- body / shoulders -->
+  <path fill="none"
+        d="M5 21v-2a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v2"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- plus sign -->
+  <line x1="19" y1="8" x2="19" y2="14"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="16" y1="11" x2="22" y2="11"
+        stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

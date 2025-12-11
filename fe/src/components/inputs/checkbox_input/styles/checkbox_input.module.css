@@ -1,0 +1,102 @@
+.wrapper {
+  display: flex;
+  gap: var(--space-2);
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  gap: var(--space-2);
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.input_container {
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: all var(--transition-fast);
+  outline: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.input {
+  height: 20px;
+  aspect-ratio: 1 / 1;
+  accent-color: var(--primary-500);
+  cursor: pointer;
+}
+
+.labels_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.label_container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  white-space: normal;
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+}
+
+.label_with_link {
+  color: var(--primary-600);
+  text-decoration: none;
+  font-weight: var(--font-medium);
+  transition: color var(--transition-fast);
+}
+
+.label_with_link:hover {
+  color: var(--primary-700);
+  text-decoration: underline;
+}
+
+.error_message_container {
+  position: relative;
+  margin-top: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  background-color: rgba(239, 68, 68, 0.05);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--error);
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.error_message {
+  color: var(--error);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+.error_icon {
+  width: auto;
+  height: auto;
+  display: flex;
+}
+
+.error_icon_svg {
+  width: var(--text-sm);
+  height: var(--text-sm);
+  color: var(--error);
+}

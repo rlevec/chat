@@ -1,0 +1,138 @@
+.message_bubble {
+  max-width: 70%;
+  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  word-wrap: break-word;
+  min-width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: var(--space-2);
+}
+
+.sender_indicator {
+  font-size: var(--text-xs);
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+.sender_read_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message_sent {
+  align-self: flex-end;
+  background: var(--primary-500);
+  color: var(--text-inverse);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+.message_bubble.editing {
+  box-shadow: 0 0 0 2.5px var(--warning),
+              0 0 10px var(--warning);
+}
+
+.message_received {
+  align-self: flex-start;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  border-bottom-left-radius: var(--radius-sm);
+}
+
+.message_content {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+.message_cta_metadata_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.cta_container {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message_metadata {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+}
+
+.message_time {
+  opacity: 0.8;
+}
+
+.edited {
+  font-size: var(--text-xs);
+  opacity: 0.8;
+  color: var(--text-primary);
+}
+
+.status_read {
+  color: var(--primary-300);
+}
+
+.system_message {
+  align-self: center;
+  text-align: center;
+  background: var(--neutral-200);
+  color: var(--text-secondary);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  font-style: italic;
+  max-width: 80%;
+}
+
+
+.date_separator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: var(--space-4) 0;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.date_separator::before,
+.date_separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-light);
+}
+
+.cta_icon {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  fill: var(--text-inverse);
+  color: var(--text-inverse);
+  width: 20px;
+  height: 20px;
+}
+
+.cta_icon line {
+  color: var(--primary-500);
+}
+
+.cta_icon:hover {
+  opacity: 1;
+}

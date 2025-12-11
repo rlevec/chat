@@ -1,0 +1,109 @@
+.notification_wrapper {
+    position: fixed;
+    top: var(--space-3);
+    right: var(--space-2);
+    z-index: 9999999999999;
+    width: 100%;
+    max-width: 500px;
+    animation: slide_in_down 0.3s ease-out;
+}
+
+.notification_wrapper.mobile {
+    max-width: unset;
+    right: unset;
+}
+
+.notification_container {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-3) var(--space-4);
+    margin: 0 var(--space-4);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-light);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.notification_content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    position: relative;
+}
+
+.notification_icon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+}
+
+.success .notification_icon {
+    color: var(--success);
+}
+
+.error .notification_icon {
+    color: var(--error);
+}
+
+.error .notification_icon path {
+    fill: var(--error);
+}
+
+.info .notification_icon {
+    color: var(--info);
+}
+
+.warning .notification_icon {
+    color: var(--warning);
+}
+
+.notification_message {
+    flex: 1;
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--text-primary);
+    line-height: var(--leading-tight);
+}
+
+.notification_close_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: var(--space-1);
+    margin-left: auto;
+    opacity: 0.5;
+    transition: opacity var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+}
+
+.notification_close_button:hover {
+    opacity: 1;
+    background-color: var(--neutral-100);
+}
+
+.notification_close_icon {
+    width: 16px;
+    height: 16px;
+    color: var(--neutral-600);
+}
+
+.success .notification_container {
+    border-left: 4px solid var(--success);
+    box-shadow: var(--shadow-success);
+}
+
+.error .notification_container {
+    border-left: 4px solid var(--error);
+    box-shadow: var(--shadow-error);
+}
+
+.info .notification_container {
+    border-left: 4px solid var(--info);
+}
+
+.warning .notification_container {
+    border-left: 4px solid var(--warning);
+}

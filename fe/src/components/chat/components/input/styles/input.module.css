@@ -1,0 +1,111 @@
+.input_container {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4) var(--space-6);
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-light);
+  }
+
+  .input_container.mobile {
+    background: var(--bg-sidebar);
+  }
+  
+  .input_wrapper {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    background: var(--neutral-100);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: var(--space-3) var(--space-4);
+    transition: all var(--transition-fast);
+    position: relative;
+  }
+  
+  .input_wrapper:focus-within {
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 2px var(--primary-100);
+  }
+  
+  .input_wrapper_error {
+    border-color: var(--error);
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1);
+  }
+  
+  .text_input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    color: var(--text-primary);
+    resize: none;
+    max-height: 120px;
+    min-height: 24px;
+    width: 100%;
+    padding-left: 2rem;
+  }
+  
+  .text_input::placeholder {
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+  }
+  
+  .cta_button {
+    background: var(--primary-500);
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+  }
+  
+  .cta_button:hover:not(:disabled) {
+    background: var(--primary-600);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .cta_button:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  
+  .cta_button:disabled {
+    background: var(--neutral-400);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .cta_button_icon {
+    color: var(--text-inverse);
+    width: 20px;
+    height: 20px;
+  }
+
+  .close_button_icon path {
+    fill: var(--text-inverse);
+  }
+
+.send_message_icon {
+  top: 0 !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0 !important;
+}
+
+.send_message_icon svg {
+  width: 25px !important;
+  height: 25px !important;
+}
